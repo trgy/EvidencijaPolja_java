@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diplomski.controlleri.IzbornikController">
+   <children>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <VBox prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="godinaLabel" text="Godina">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+            <Region maxHeight="50.0" minHeight="50.0" prefHeight="60.0" prefWidth="370.0" />
+            <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label fx:id="korisnikLabel" onMouseClicked="#korisnikLabelClicked" text="korisničkoIme">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label onMouseClicked="#odjavaClicked" text="(odjava)" textFill="#035eff">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label text="Dodatne info o godini:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="23.0" />
+               </HBox.margin>
+            </Label>
+            <TextArea fx:id="GodinaInfoTextArea" prefHeight="100.0" prefWidth="300.0" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextArea>
+            <Button mnemonicParsing="false" onAction="#spremiButtonClicked" text="Spremi">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" top="23.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Button maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#izborPoljaClicked" text="Izbor polja">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#cjenikClicked" text="Cjenik">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#natragButtonClicked" text="Natrag">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Region prefHeight="180.0" prefWidth="400.0" />
+            <Button mnemonicParsing="false" onAction="#obrisiGodinuClicked" text="Obriši godinu">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="15.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
